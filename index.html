@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undangan Pernikahan</title>
+<meta name="description" content="Undangan pernikahan digital. Kami mengundang Anda untuk hadir di hari bahagia kami.">
+<meta property="og:title" content="Undangan Pernikahan">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/pasangan.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#faf6ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="fl" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.4"><g id="p"><ellipse cx="50" cy="28" rx="9" ry="20"/></g><use href="#p" transform="rotate(72 50 50)"/><use href="#p" transform="rotate(144 50 50)"/><use href="#p" transform="rotate(216 50 50)"/><use href="#p" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="5" fill="currentColor"/></g></symbol></svg>
+
+<section id="cover" class="cover">
+  <svg class="orn tl"><use href="#fl"/></svg><svg class="orn br"><use href="#fl"/></svg>
+  <p>The Wedding of</p>
+  <h1 class="names"><span data-b="bride.short"></span> &amp; <span data-b="groom.short"></span></h1>
+  <p class="to">Kepada Yth.<br><strong id="guest">Tamu Undangan</strong></p>
+  <button id="open" class="btn">Buka Undangan</button>
+</section>
+
+<main>
+<section id="home" class="sec hero">
+  <h2 class="script names"><span data-b="bride.short"></span> &amp; <span data-b="groom.short"></span></h2>
+  <p id="heroDate"></p>
+</section>
+
+<section id="salam" class="sec reveal">
+  <svg class="orn sm"><use href="#fl"/></svg>
+  <h2>Salam Pembuka</h2>
+  <p id="opening"></p>
+</section>
+
+<section id="mempelai" class="sec reveal">
+  <h2>Mempelai</h2>
+  <div class="photo couple" id="couplePhoto"></div>
+  <div class="person"><div class="photo round" id="bridePhoto"></div><h3 class="script" data-b="bride.full"></h3><p data-b="bride.parents"></p></div>
+  <p class="amp script">&amp;</p>
+  <div class="person"><div class="photo round" id="groomPhoto"></div><h3 class="script" data-b="groom.full"></h3><p data-b="groom.parents"></p></div>
+</section>
+
+<section id="acara" class="sec reveal">
+  <h2>Waktu &amp; Tempat</h2>
+  <div class="countdown" id="cd" aria-live="off"></div>
+  <div class="cards" id="events"></div>
+  <a id="maps" class="btn" target="_blank" rel="noopener">Buka Google Maps</a>
+</section>
+
+<section id="galeri" class="sec reveal"><h2>Galeri</h2><div class="gallery" id="gallery"></div></section>
+
+<section id="cerita" class="sec reveal"><h2>Perjalanan Cinta</h2><div class="timeline" id="story"></div></section>
+
+<section id="rsvp" class="sec reveal">
+  <h2>Konfirmasi Kehadiran</h2>
+  <div class="form">
+    <input id="rName" placeholder="Nama Anda" autocomplete="name">
+    <select id="rStatus"><option>Hadir</option><option>Tidak Hadir</option></select>
+    <input id="rCount" type="number" min="1" max="10" value="1" aria-label="Jumlah tamu">
+    <button class="btn" id="rSend">Kirim via WhatsApp</button>
+  </div>
+</section>
+
+<section id="tamu" class="sec reveal">
+  <h2>Buku Tamu</h2>
+  <div class="form">
+    <input id="gName" placeholder="Nama Anda">
+    <textarea id="gMsg" rows="3" placeholder="Tulis ucapan dan doa"></textarea>
+    <button class="btn" id="gSend">Kirim Ucapan</button>
+  </div>
+  <div id="gbList" class="gb"></div>
+  <small>Ucapan tersimpan di perangkat ini saja.</small>
+</section>
+
+<section id="hadiah" class="sec reveal"><h2>Amplop Digital</h2><p>Doa restu Anda sudah sangat berarti. Bila ingin memberi hadiah, silakan melalui:</p><div class="cards" id="gifts"></div></section>
+
+<section id="penutup" class="sec reveal">
+  <svg class="orn sm"><use href="#fl"/></svg>
+  <p id="closing"></p>
+  <p>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+  <h2 class="script names"><span data-b="bride.short"></span> &amp; <span data-b="groom.short"></span></h2>
+</section>
+</main>
+
+<nav class="nav" id="nav">
+  <a href="#home">Awal</a><a href="#mempelai">Mempelai</a><a href="#acara">Acara</a><a href="#galeri">Galeri</a><a href="#rsvp">RSVP</a><a href="#tamu">Ucapan</a>
+</nav>
+<button id="music" class="music" aria-label="Putar musik">♪</button>
+<audio id="audio" loop preload="none"></audio>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
